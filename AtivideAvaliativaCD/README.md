@@ -1,7 +1,11 @@
-1 - Abrir o terminal > rodar os códigos abaixo: 
+1 - Criar o ambiente virtual: 
+    python -m venv env
 
-2- Instalar dependências: 
+2 - Ativar o ambiente virtual:
+    .env\Scripts\activate
+
+3- Instalar dependências: 
     pip install requests
 
-3 - Atualizar dependências: 
+4 - Atualizar dependências: 
     pip freeze > requirements.txt
