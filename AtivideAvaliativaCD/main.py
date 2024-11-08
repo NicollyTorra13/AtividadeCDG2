@@ -19,14 +19,14 @@ def registrar_cotacao(cotacao):
 
 def enviar_email(cotacao):
     Corpo_email = f"""
-    <p>Dólar está abaixo de R$5.70, Cotação atual: R${cotacao}</p>
+    <p>Dólar está abaixo de R$5.90, Cotação atual: R${cotacao}</p>
     """
     
     msg = EmailMessage()
-    msg['Subject'] = "Dólar está hoje abaixo de 5.70"
+    msg['Subject'] = "Dólar está hoje abaixo de 5.90"
     msg['From'] = '1134874@atitus.edu.br'
     msg['To'] = '1134874@atitus.edu.br'
-    Password = 'zrujbpbxezkksygh'
+    Password = 'pqgyecklnycuwuik'
     msg.set_content(Corpo_email, subtype='html')
 
     with smtplib.SMTP('smtp.gmail.com', 587) as s:
@@ -35,7 +35,7 @@ def enviar_email(cotacao):
         s.send_message(msg)
         print('Email enviado')
 
-if cotacao < 5.70:
+if cotacao < 5.90:
     enviar_email(cotacao)
 
 registrar_cotacao(cotacao)
